@@ -146,4 +146,11 @@ public struct ChatQuery: Equatable, Codable, Streamable {
         try container.encodeIfPresent(seed, forKey: .seed)
         try container.encodeIfPresent(stop, forKey: .stop)
         try container.encodeIfPresent(temperature, forKey: .temperature)
-        try container.encodeIfPresent(toolChoice, forKey:
+        try container.encodeIfPresent(toolChoice, forKey: .toolChoice)
+        try container.encodeIfPresent(tools, forKey: .tools)
+        try container.encodeIfPresent(topLogprobs, forKey: .topLogprobs)
+        try container.encodeIfPresent(topP, forKey: .topP)
+        try container.encodeIfPresent(user, forKey: .user)
+        try container.encode(stream, forKey: .stream)
+    }
+}
